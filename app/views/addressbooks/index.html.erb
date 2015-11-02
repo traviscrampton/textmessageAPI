@@ -1,0 +1,9 @@
+<h1>Address books!</h1>
+
+<%= link_to "New Addressbook", new_addressbook_path %>
+
+<ul>
+  <% @addressbooks.each do |book| %>
+    <li><%= link_to book.owner, addressbook_path(book) %></li>
+  <% end %>
+</ul>

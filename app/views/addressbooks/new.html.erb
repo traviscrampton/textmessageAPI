@@ -1,0 +1,10 @@
+<h1>New Addressbook!</h1>
+
+<%= bootstrap_form_for @addressbook do |f| %>
+  <div class="form-field form-group">
+    <%= f.text_field :owner %>
+  </div>
+  <div class="form-field form-group">
+    <%= f.submit %>
+  </div>
+<% end %>

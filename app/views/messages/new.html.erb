@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Create A New message</h1>
+    <%= bootstrap_form_for [@contact, @message] do |f| %>
+    <div class="form-field form-group">
+      <%= f.text_field :body %>
+    </div>
+    <div class="form-field form-group">
+      <%= f.submit %>
+    </div>
+
+    <% end %>
+</div>

@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Contact Name: <%= @contact.name %></h1>
+  <h1>How You Know Them: <%= @contact.relationship %></h1>
+  <h1>Phone Number: <%= @contact.phonenumber %></h1>
+
+<br>
+<h3><%= link_to "Back To Your Addressbook", addressbook_path(@contact.addressbook_id) %><h3>
+<br>
+<h3><%= link_to "Send a Message", new_contact_message_path(@contact) %><h3>
+</div>
+
+<ul>
+  <% @contact.messages.each do |message| %>
+    <li><%= message.body %></li>
+  <% end %>
+</ul>
